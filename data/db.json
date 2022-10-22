@@ -9,14 +9,6 @@
       "id": 1
     },
     {
-      "name": "Ruchi Yadav",
-      "username": "ruchiyadav0982",
-      "email": "ruchi@chetu.com",
-      "phone": "987654321",
-      "website": "www.ruchiyadav.com",
-      "id": 2
-    },
-    {
       "name": "Gajraj Singh",
       "username": "gajrajsingh0562",
       "email": "gajrags@chetu.com",
@@ -33,19 +25,19 @@
       "id": 4
     },
     {
-      "name": "Shadab khan",
-      "username": "shadabkhan2352",
-      "email": "shadabk@chetu.com",
-      "phone": "9868988974",
-      "website": "www.shadabkhan.com",
+      "name": "Shadab Khan",
+      "username": "shadabkhan3115",
+      "email": "shadabkhan@example.com",
+      "phone": "9876543320",
+      "website": "www.google.com",
       "id": 5
     },
     {
-      "name": "Shadab Khan1",
-      "username": "shadabkhan_r",
-      "email": "shadabkhan1@exp.com",
-      "phone": "9876543210",
-      "website": "www.google.com",
+      "name": "Sahil Malik",
+      "username": "sahilmalik01235",
+      "email": "sahilmalik2505@exmple.com",
+      "phone": "9874563210",
+      "website": "www.sahilmalik.com",
       "id": 6
     }
   ]

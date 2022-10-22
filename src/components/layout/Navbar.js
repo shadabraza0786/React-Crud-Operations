@@ -1,11 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
+
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
+
         <a className="navbar-brand" href="/">
           User Info
         </a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -39,6 +43,7 @@ const Navbar = () => {
         </div>
         <Link className="btn btn-outline-light" to="/users/add">Add User</Link>
       </div>
+
     </nav>
   );
 };
