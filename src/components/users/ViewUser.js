@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -12,14 +12,17 @@ function ViewUser() {
     });
 
     const { id } = useParams();
+    const tempGetUser = useRef()
 
     const getUser = async () => {
         const result = await axios.get(`http://localhost:5000/users/${id}`);
         setUser(result.data);
     }
 
+    tempGetUser.current = getUser
+
     useEffect(() => {
-        getUser();
+        tempGetUser.current();
     }, []);
 
     return (

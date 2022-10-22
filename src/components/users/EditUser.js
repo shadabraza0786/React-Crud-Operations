@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
 
 const EditUser = () => {
+
+  const tempGetUser = useRef();
   let history = useHistory();
   const { id } = useParams();
   const [user, setUser] = useState({
@@ -31,9 +33,11 @@ const EditUser = () => {
     console.log(result.data)
   }
 
+  tempGetUser.current = getUser
+
   useEffect(() => {
-    getUser();
-  }, []);
+    tempGetUser.current();
+  },[]);
 
   return (
     <div className="container">
