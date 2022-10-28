@@ -6,7 +6,7 @@ const Home = () => {
   const [users, setUser] = useState([]);
 
   const getUser = async () => {
-    const result = await axios.get("https://curd-operations-api.herokuapp.com/users");
+    const result = await axios.get("http://localhost:3005/getUsers");
     setUser(result.data);
   };
 
