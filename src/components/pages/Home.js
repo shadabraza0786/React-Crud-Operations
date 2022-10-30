@@ -6,14 +6,14 @@ const Home = () => {
   const [users, setUser] = useState([]);
 
   const getUser = async () => {
-    const result = await axios.get("http://localhost:3005/getUsers");
+    const result = await axios.get("https://curd-operations-api.herokuapp.com/getUsers");
+    console.log(result)
     setUser(result.data);
   };
 
   const deleteUser = async id => {
-    await axios.delete(`https://curd-operations-api.herokuapp.com/users/${id}`);
+    await axios.delete(`https://curd-operations-api.herokuapp.com/${id}`);
     getUser();
-
   }
 
   useEffect(() => {
@@ -43,9 +43,9 @@ const Home = () => {
                   <td>{user.username}</td>
                   <td>{user.email}</td>
                   <td>
-                    <Link className="btn btn-primary mr-2" to={`users/${user.id}`}>View</Link>
-                    <Link className="btn btn-outline-primary mr-2" to={`users/edit/${user.id}`}>Edit</Link>
-                    <Link className="btn btn-danger" onClick={() => deleteUser(user.id)}>Delete</Link>
+                    <Link className="btn btn-primary mr-2" to={`users/${user._id}`}>View</Link>
+                    <Link className="btn btn-outline-primary mr-2" to={`users/edit/${user._id}`}>Edit</Link>
+                    <Link className="btn btn-danger" onClick={() => deleteUser(user._id)}>Delete</Link>
                   </td>
                 </tr>
               ))}

@@ -23,12 +23,12 @@ const EditUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.put(`http://localhost:5000/users/${id}`, user);
+    await axios.put(`https://curd-operations-api.herokuapp.com/${id}`, user);
     history.push("/");
   }
 
   const getUser = async () => {
-    const result = await axios.get(`http://localhost:5000/users/${id}`);
+    const result = await axios.get(`https://curd-operations-api.herokuapp.com/${id}`);
     setUser(result.data);
     console.log(result.data)
   }

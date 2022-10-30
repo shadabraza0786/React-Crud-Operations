@@ -15,7 +15,7 @@ function ViewUser() {
     const tempGetUser = useRef()
 
     const getUser = async () => {
-        const result = await axios.get(`http://localhost:5000/users/${id}`);
+        const result = await axios.get(`https://curd-operations-api.herokuapp.com/${id}`);
         setUser(result.data);
     }
 

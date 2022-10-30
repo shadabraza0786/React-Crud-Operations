@@ -20,7 +20,7 @@ const AddUser = () => {
 
   const onSubmit = async e => {
     e.preventDefault();
-    await axios.post("http://localhost:3005/addUser", user);
+    await axios.post("https://curd-operations-api.herokuapp.com/addUser", user);
     history.push("/");
   }
 
